@@ -24,7 +24,7 @@ BASIC.HTML
     Please enter your breed:
 </p>
 <form method="POST">
-    {{ form.hidden_tag() }}
-    {{ form.breed.label }} {{ form.breed() }}
-    {{ form.submit() }}
+    {{ form.hidden_tag() }} #this is for csrf security feautre
+    {{ form.breed.label }} {{ form.breed() }} #label is what breed are you mean string field and form.breed makes box 
+    {{ form.submit() }} makesa submir box
 </form>
