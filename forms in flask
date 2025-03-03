@@ -16,3 +16,15 @@ def index():
     return render_template('basic.html',form=form,breed=breed)
 if __name__ == '__main__':
     app.run(debug=True)
+BASIC.HTML
+<p>
+    {% if breed %}
+        The breed you entered is {{ breed }}. Update it in the form below:
+    {% endif %}
+    Please enter your breed:
+</p>
+<form method="POST">
+    {{ form.hidden_tag() }}
+    {{ form.breed.label }} {{ form.breed() }}
+    {{ form.submit() }}
+</form>
